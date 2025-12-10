@@ -4,3 +4,12 @@ sqlalchemy
 asyncpg
 pydantic-settings
 python-dotenv
+httpx
+python-multipart
+passlib[bcrypt]
+bcrypt==4.0.1
+python-jose[cryptography]
+aiofiles
+Pillow
+email-validator
+google-generativeai
