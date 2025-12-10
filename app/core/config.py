@@ -7,6 +7,14 @@ class Settings(BaseSettings):
     
     DATABASE_URL: str
     
+    SECRET_KEY: str = "changethis" # Default for dev, user should override
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    
+    HF_API_KEY: Optional[str] = None
+    GEMINI_API_KEY: Optional[str] = None
+    GEMINI_API_KEY: Optional[str] = None
+
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> str:
         return self.DATABASE_URL
