@@ -46,8 +46,8 @@ async def multimodal_chat(
         text_query=text_query,
         image_url=image_url,
         response_text=result["response"],
-        llm_model_name="gemini-pro",
-        vlm_model_name="gemini-pro-vision", 
+        llm_model_name=llm_strategy.model_name,
+        vlm_model_name=vlm_strategy.model_name, 
         # Context is internal, not stored in this schema iteration, but we have prompt/response
     )
     db.add(log)
